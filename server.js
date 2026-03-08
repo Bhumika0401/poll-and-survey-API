@@ -1,48 +1,37 @@
-const express = require('express');
-const path = require('path');
+const express = require("express");
+const path = require("path");
 
-const pollRoutes = require('./routes/pollRoutes');
+const pollRoutes = require("./routes/pollRoutes");
 
 const app = express();
 const PORT = 3000;
 
-
-// Middleware
 app.use(express.json());
 
+app.use(express.static(path.join(__dirname, "public")));
 
-// Logger middleware
-app.use((req, res, next) => {
-
-    console.log(`${req.method} ${req.url}`);
-
-    next();
-
-});
+app.use("/polls", pollRoutes);
 
 
-// Serve static frontend
-app.use(express.static(path.join(__dirname, 'public')));
+app.post("/login", (req, res) => {
 
+    const { username, password } = req.body;
 
-// Routes
-app.use('/polls', pollRoutes);
+    if (username === "admin" && password === "1234") {
 
+        res.json({ success: true });
 
-// Error handling middleware
-app.use((err, req, res, next) => {
+    } else {
 
-    console.error(err);
+        res.json({ success: false });
 
-    res.status(500).json({
-        message: "Internal Server Error"
-    });
+    }
 
 });
 
 
 app.listen(PORT, () => {
 
-    console.log(`Server running at http://localhost:${PORT}`);
+    console.log(`Server running at http://localhost:3000`);
 
 });

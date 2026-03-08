@@ -1,79 +1,202 @@
 body{
 
-font-family: Arial;
-
-background:#f5f5f5;
-
-padding:40px;
-
-text-align:center;
+font-family: 'Segoe UI', sans-serif;
+background: linear-gradient(120deg,#f6f9fc,#e9eff5);
+margin:0;
 
 }
 
-h1{
+/* NAVBAR */
 
-color:#333;
+.navbar{
+
+background:#2c3e50;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
 
 }
+
+.loginBtn{
+
+background:#3498db;
+padding:10px 18px;
+border:none;
+border-radius:6px;
+color:white;
+cursor:pointer;
+transition:0.3s;
+
+}
+
+.loginBtn:hover{
+
+background:#2980b9;
+transform:scale(1.05);
+
+}
+
+/* CONTAINER */
+
+.container{
+
+width:85%;
+margin:auto;
+margin-top:30px;
+
+}
+
+/* CREATE POLL */
 
 .createPoll{
 
 background:white;
-
-padding:20px;
-
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
 margin-bottom:30px;
 
-border-radius:10px;
-
-box-shadow:0 0 10px rgba(0,0,0,0.1);
-
 }
 
-input{
+.createPoll input{
 
+width:100%;
 padding:10px;
-
-margin:5px;
-
-width:200px;
+margin:8px 0;
+border-radius:6px;
+border:1px solid #ccc;
 
 }
 
-button{
+.createBtn{
 
-padding:10px 15px;
-
-margin:5px;
-
-background:#4CAF50;
-
-color:white;
-
+background:#27ae60;
+padding:12px 20px;
 border:none;
-
+color:white;
+border-radius:6px;
 cursor:pointer;
+transition:0.3s;
 
-border-radius:5px;
+}
+
+.createBtn:hover{
+
+background:#1e8449;
+transform:scale(1.05);
 
 }
 
-button:hover{
+/* POLL SECTION */
 
-background:#45a049;
+.pollSection{
+
+margin-top:20px;
 
 }
+
+/* POLL CARD */
 
 .poll{
 
 background:white;
-
-margin:15px;
-
 padding:20px;
-
+margin-top:20px;
 border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
 
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.poll:hover{
+
+transform:translateY(-5px);
+
+}
+
+.poll button{
+
+margin-top:6px;
+padding:8px 12px;
+border:none;
+background:#3498db;
+color:white;
+border-radius:5px;
+cursor:pointer;
+transition:0.2s;
+
+}
+
+.poll button:hover{
+
+background:#2980b9;
+
+}
+
+/* CHART SIZE */
+
+canvas{
+
+margin-top:15px;
+max-width:400px;
+max-height:220px;
+
+}
+
+/* MODAL */
+
+.modal{
+
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+justify-content:center;
+align-items:center;
+
+}
+
+.modalContent{
+
+background:white;
+padding:30px;
+border-radius:10px;
+width:300px;
+text-align:center;
+animation:pop 0.3s ease;
+
+}
+
+.modalContent input{
+
+width:100%;
+padding:10px;
+margin:8px 0;
+border-radius:6px;
+border:1px solid #ccc;
+
+}
+
+.modalContent button{
+
+background:#3498db;
+padding:10px 20px;
+border:none;
+color:white;
+border-radius:6px;
+cursor:pointer;
+
+}
+
+@keyframes pop{
+
+from{transform:scale(0.8);opacity:0}
+to{transform:scale(1);opacity:1}
 
 }

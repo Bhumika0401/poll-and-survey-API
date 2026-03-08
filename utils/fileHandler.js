@@ -1,14 +1,17 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-const filePath = path.join(__dirname, '..', 'data', 'polls.json');
+const filePath = path.join(__dirname, "../data/polls.json");
 
 function readPolls() {
+
+    if (!fs.existsSync(filePath)) {
+        fs.writeFileSync(filePath, "[]");
+    }
 
     const data = fs.readFileSync(filePath);
 
     return JSON.parse(data);
-
 }
 
 function writePolls(polls) {
@@ -17,4 +20,7 @@ function writePolls(polls) {
 
 }
 
-module.exports = { readPolls, writePolls };
+module.exports = {
+    readPolls,
+    writePolls
+};

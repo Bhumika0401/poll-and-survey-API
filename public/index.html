@@ -3,40 +3,75 @@
 
 <head>
 
-<title>Poll & Survey System</title>
+<title>Interactive Poll System</title>
 
 <link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
 <body>
 
-<h1>Poll & Survey Dashboard</h1>
+<nav class="navbar">
+
+<h1>🗳 Interactive Poll System</h1>
+
+<button class="loginBtn" onclick="openLogin()">Login</button>
+
+</nav>
 
 
-<div class="createPoll">
+<div class="container">
 
-<h2>Create Poll</h2>
+<section class="createPoll">
 
-<input id="question" placeholder="Enter question">
+<h2>Create New Poll</h2>
+
+<input id="question" placeholder="Enter your question">
+
+<div class="options">
 
 <input id="opt1" placeholder="Option 1">
-
 <input id="opt2" placeholder="Option 2">
-
 <input id="opt3" placeholder="Option 3">
 
-<button onclick="createPoll()">Create Poll</button>
+</div>
+
+<button class="createBtn" onclick="createPoll()">Add Poll</button>
+
+</section>
+
+
+<section class="pollSection">
+
+<h2>Live Polls</h2>
+
+<div id="pollContainer"></div>
+
+</section>
 
 </div>
 
 
-<h2>Available Polls</h2>
+<div id="loginModal" class="modal">
 
-<div id="pollContainer"></div>
+<div class="modalContent">
+
+<h2>Login</h2>
+
+<input id="username" placeholder="Username">
+
+<input id="password" type="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+</div>
+
+</div>
+
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
