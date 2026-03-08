@@ -1,202 +1,137 @@
-body{
-
-font-family: 'Segoe UI', sans-serif;
-background: linear-gradient(120deg,#f6f9fc,#e9eff5);
-margin:0;
-
+:root {
+    --bg: #0f172a;
+    --card: rgba(30, 41, 59, 0.7);
+    --accent: #10b981;
+    --accent-alt: #8b5cf6;
+    --text: #f8fafc;
+    --border: rgba(255, 255, 255, 0.1);
 }
 
-/* NAVBAR */
-
-.navbar{
-
-background:#2c3e50;
-color:white;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 40px;
-box-shadow:0 4px 10px rgba(0,0,0,0.2);
-
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background: radial-gradient(circle at top right, #1e293b, #0f172a);
+    color: var(--text);
+    margin: 0;
+    line-height: 1.6;
 }
 
-.loginBtn{
-
-background:#3498db;
-padding:10px 18px;
-border:none;
-border-radius:6px;
-color:white;
-cursor:pointer;
-transition:0.3s;
-
+.navbar {
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 1rem 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.loginBtn:hover{
+.navbar h1 span { color: var(--accent); }
 
-background:#2980b9;
-transform:scale(1.05);
-
+.loginBtn {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 8px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-/* CONTAINER */
-
-.container{
-
-width:85%;
-margin:auto;
-margin-top:30px;
-
+.loginBtn:hover {
+    background: var(--accent);
+    color: var(--bg);
 }
 
-/* CREATE POLL */
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
 
-.createPoll{
-
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
-margin-bottom:30px;
-
+.createPoll {
+    background: var(--card);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
 }
 
-.createPoll input{
-
-width:100%;
-padding:10px;
-margin:8px 0;
-border-radius:6px;
-border:1px solid #ccc;
-
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: white;
+    box-sizing: border-box;
 }
 
-.createBtn{
-
-background:#27ae60;
-padding:12px 20px;
-border:none;
-color:white;
-border-radius:6px;
-cursor:pointer;
-transition:0.3s;
-
+.createBtn {
+    background: linear-gradient(135deg, var(--accent), var(--accent-alt));
+    width: 100%;
+    padding: 14px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
 }
 
-.createBtn:hover{
-
-background:#1e8449;
-transform:scale(1.05);
-
+.poll {
+    background: var(--card);
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
 }
 
-/* POLL SECTION */
-
-.pollSection{
-
-margin-top:20px;
-
+.poll-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin: 15px 0;
 }
 
-/* POLL CARD */
-
-.poll{
-
-background:white;
-padding:20px;
-margin-top:20px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-transition:0.3s;
-
+.poll button {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
-.poll:hover{
-
-transform:translateY(-5px);
-
+.poll button:hover {
+    border-color: var(--accent);
+    background: rgba(16, 185, 129, 0.1);
 }
 
-.poll button{
-
-margin-top:6px;
-padding:8px 12px;
-border:none;
-background:#3498db;
-color:white;
-border-radius:5px;
-cursor:pointer;
-transition:0.2s;
-
+.chart-container {
+    height: 180px; /* Fixed height for neatness */
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 15px;
 }
 
-.poll button:hover{
-
-background:#2980b9;
-
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
 }
 
-/* CHART SIZE */
-
-canvas{
-
-margin-top:15px;
-max-width:400px;
-max-height:220px;
-
-}
-
-/* MODAL */
-
-.modal{
-
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.6);
-justify-content:center;
-align-items:center;
-
-}
-
-.modalContent{
-
-background:white;
-padding:30px;
-border-radius:10px;
-width:300px;
-text-align:center;
-animation:pop 0.3s ease;
-
-}
-
-.modalContent input{
-
-width:100%;
-padding:10px;
-margin:8px 0;
-border-radius:6px;
-border:1px solid #ccc;
-
-}
-
-.modalContent button{
-
-background:#3498db;
-padding:10px 20px;
-border:none;
-color:white;
-border-radius:6px;
-cursor:pointer;
-
-}
-
-@keyframes pop{
-
-from{transform:scale(0.8);opacity:0}
-to{transform:scale(1);opacity:1}
-
+.modalContent {
+    background: #1e293b;
+    padding: 40px;
+    border-radius: 20px;
+    width: 320px;
+    text-align: center;
 }

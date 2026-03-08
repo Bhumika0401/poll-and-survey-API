@@ -16,5 +16,23 @@
         "votes": 1
       }
     ]
+  },
+  {
+    "id": 1772946864971,
+    "question": "what is your favourite color ? ",
+    "options": [
+      {
+        "text": "red",
+        "votes": 6
+      },
+      {
+        "text": "blue",
+        "votes": 4
+      },
+      {
+        "text": "green",
+        "votes": 2
+      }
+    ]
   }
 ]
