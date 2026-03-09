@@ -1,37 +1,101 @@
 [
   {
-    "id": 1772946651493,
-    "question": "hi",
+    "id": 1773054354586,
+    "question": "what is your fav color?",
     "options": [
       {
-        "text": "1",
-        "votes": 1
+        "text": "Blue",
+        "votes": 1,
+        "voters": [
+          1773054344074
+        ]
       },
       {
-        "text": "2",
-        "votes": 0
+        "text": "Red",
+        "votes": 0,
+        "voters": []
       },
       {
-        "text": "3",
-        "votes": 1
+        "text": "Black",
+        "votes": 1,
+        "voters": [
+          1773057529579
+        ]
       }
     ]
   },
   {
-    "id": 1772946864971,
-    "question": "what is your favourite color ? ",
+    "id": 1773054667965,
+    "question": "which ice cream flavor you like ",
     "options": [
       {
-        "text": "red",
-        "votes": 6
+        "text": "Blue Berry",
+        "votes": 1,
+        "voters": [
+          1773057529579
+        ]
       },
       {
-        "text": "blue",
-        "votes": 4
+        "text": "Vanila",
+        "votes": 0,
+        "voters": []
       },
       {
-        "text": "green",
-        "votes": 2
+        "text": "Choco chip",
+        "votes": 1,
+        "voters": [
+          1773054344074
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1773055239833,
+    "question": "Best programming language?",
+    "options": [
+      {
+        "text": "JavaScript",
+        "votes": 0,
+        "voters": []
+      },
+      {
+        "text": "Python",
+        "votes": 2,
+        "voters": [
+          1773054344074,
+          1773057529579
+        ]
+      },
+      {
+        "text": "Java",
+        "votes": 1,
+        "voters": [
+          1773054415068
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1773056030663,
+    "question": "Best programming language?",
+    "options": [
+      {
+        "text": "JavaScript",
+        "votes": 2,
+        "voters": [
+          1773054344074,
+          1773057529579
+        ]
+      },
+      {
+        "text": "Python",
+        "votes": 0,
+        "voters": []
+      },
+      {
+        "text": "Java",
+        "votes": 0,
+        "voters": []
       }
     ]
   }

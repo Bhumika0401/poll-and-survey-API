@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "password": "1234",
+    "role": "admin"
+  },
+  {
+    "id": 1773054344074,
+    "username": "johan",
+    "password": "$2b$10$7jHQDQra6saraPVOsgDm4eUtTQ0UooG8MAQagZS2DhpgQIAfavcgG",
+    "role": "user"
+  },
+  {
+    "id": 1773054415068,
+    "username": "Tom",
+    "password": "$2b$10$Pvfb0IaMyhVEbQlrSG/PbOER/ZUC/ATM/s4SDACHgADAeRQ2qSTOa",
+    "role": "user"
+  },
+  {
+    "id": 1773055161054,
+    "username": "kiran",
+    "password": "$2b$10$UBDN55U.CQ6oTz8cpesoX.P1nVJDwLYfQGcDU5WNPBxCQiIl8Jt8y",
+    "role": "user"
+  },
+  {
+    "id": 1773057529579,
+    "username": "Candy",
+    "password": "$2b$10$Wguwp.9wEHMG1b7M.6tkh.qVp.gC8J8/LVA57RbBVS0ff5x3wAycC",
+    "role": "user"
+  }
+]

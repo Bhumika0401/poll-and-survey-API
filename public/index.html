@@ -1,46 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VibePoll | Interactive System</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VibePoll | Interactive System</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
+
 <body>
-    <nav class="navbar">
-        <h1>Vibe<span>Poll</span></h1>
-        <button class="loginBtn" onclick="openLogin()">Admin Login</button>
-    </nav>
 
-    <div class="container">
-        <section class="createPoll">
-            <h2>Create New Poll</h2>
-            <input id="question" placeholder="What's on your mind?">
-            <div class="options-input">
-                <input id="opt1" placeholder="Option 1">
-                <input id="opt2" placeholder="Option 2">
-                <input id="opt3" placeholder="Option 3">
-            </div>
-            <button class="createBtn" onclick="createPoll()">Launch Poll</button>
-        </section>
+<nav class="navbar">
+<h1>Vibe<span>Poll</span></h1>
 
-        <section class="pollSection">
-            <h2>Active Polls</h2>
-            <div id="pollContainer"></div>
-        </section>
-    </div>
+<div>
+<button class="loginBtn" onclick="openLogin()">Login</button>
+<button class="loginBtn" onclick="logout()">Logout</button>
+</div>
 
-    <div id="loginModal" class="modal">
-        <div class="modalContent">
-            <h2>Admin Access</h2>
-            <input id="username" placeholder="Username">
-            <input id="password" type="password" placeholder="Password">
-            <button class="createBtn" onclick="login()">Sign In</button>
-            <button class="closeBtn" onclick="document.getElementById('loginModal').style.display='none'">Cancel</button>
-        </div>
-    </div>
+</nav>
 
-    <script src="script.js"></script>
+<div class="container">
+
+
+
+
+<section class="pollSection">
+
+<h2>Active Polls</h2>
+
+<div id="pollContainer"></div>
+
+</section>
+<section class="createPoll">
+
+<h2>Create New Poll</h2>
+
+<input id="question" placeholder="What's on your mind?">
+
+<div class="options-input">
+<input id="opt1" placeholder="Option 1">
+<input id="opt2" placeholder="Option 2">
+<input id="opt3" placeholder="Option 3">
+</div>
+
+<button class="createBtn" onclick="createPoll()">Launch Poll</button>
+
+</section>
+</div>
+
+
+<div id="loginModal" class="modal">
+
+<div class="modalContent">
+
+<h2>Login</h2>
+
+<input id="username" placeholder="Username">
+
+<input id="password" type="password" placeholder="Password">
+
+<button class="createBtn" onclick="login()">Login</button>
+
+<button class="createBtn" onclick="register()">Register</button>
+
+<button class="closeBtn"
+onclick="document.getElementById('loginModal').style.display='none'">
+Cancel
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
