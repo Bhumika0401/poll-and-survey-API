@@ -3,14 +3,14 @@ let chartInstances = {};
 
 checkLogin();
 
-/* -------------------- LOGIN MODAL -------------------- */
+// LOGIN MODAL 
 
 function openLogin(){
     document.getElementById("loginModal").style.display="flex";
 }
 
 
-/* -------------------- CHECK LOGIN -------------------- */
+// CHECK LOGIN 
 
 function checkLogin(){
 
@@ -32,7 +32,7 @@ function checkLogin(){
 }
 
 
-/* -------------------- LOGIN -------------------- */
+// LOGIN 
 
 async function login(){
 
@@ -73,8 +73,7 @@ async function login(){
 
 }
 
-
-/* -------------------- REGISTER -------------------- */
+//REGISTER 
 
 async function register(){
 

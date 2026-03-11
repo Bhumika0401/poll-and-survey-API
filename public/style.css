@@ -120,7 +120,7 @@ input {
 }
 
 .chart-container {
-    height: 180px; /* Fixed height for neatness */
+    height: 180px; 
     margin-top: 20px;
     padding: 10px;
     background: rgba(0,0,0,0.2);
